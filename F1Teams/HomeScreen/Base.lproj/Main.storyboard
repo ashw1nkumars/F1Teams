@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IPT-SM-Irg">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="F1Teams" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="F1Logo" translatesAutoresizingMaskIntoConstraints="NO" id="4Ay-V8-1WC">
+                                <rect key="frame" x="16" y="354" width="361" height="232"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="A0Y-ZY-mMR"/>
+                                    <constraint firstAttribute="height" constant="232" id="tEn-LP-8QH"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fe-V8-0Fc">
+                                <rect key="frame" x="61" y="654" width="271" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="ETt-r5-XW6"/>
+                                    <constraint firstAttribute="width" constant="271" id="TUj-yu-7A4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Discover Teams">
+                                    <color key="baseBackgroundColor" red="0.79507213830000001" green="0.17441728710000001" blue="0.11753404889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="discoverButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HGU-F6-c00"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Ay-V8-1WC" secondAttribute="trailing" constant="16" id="MXj-aX-gKM"/>
+                            <constraint firstItem="8fe-V8-0Fc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="OAN-cw-Vd9"/>
+                            <constraint firstItem="4Ay-V8-1WC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="251" id="Uqo-hJ-Jd0"/>
+                            <constraint firstItem="4Ay-V8-1WC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VuU-pi-RVv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8fe-V8-0Fc" secondAttribute="trailing" constant="61" id="ciQ-JY-ICF"/>
+                            <constraint firstItem="8fe-V8-0Fc" firstAttribute="top" secondItem="4Ay-V8-1WC" secondAttribute="bottom" constant="68" id="zVv-GP-f7N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CGK-5Y-6bo"/>
+                    <connections>
+                        <outlet property="discoverButton" destination="8fe-V8-0Fc" id="g1T-62-vJC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Ju-wG-o1t">
+            <objects>
+                <navigationController id="IPT-SM-Irg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e0T-B6-Bu8">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SJF-aw-wt6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3dy-zd-pgO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-989" y="-704"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="F1Logo" width="156.66667175292969" height="73"/>
+    </resources>
+</document>
